@@ -17,7 +17,15 @@ public class Model {
         parking.add(aux);
         return aux;
     }
-
+    public List<Coche> buscarCoche(String matricula){
+        List<Coche> igual=new ArrayList<>();
+        for (Coche car:cars){
+            if(car.getMatricula().equals(matricula)){
+                igual.add(car);
+            }
+        }
+        return igual;
+    }
     /**
      * Busca coche segun matricula
      * @param matricula a buscar

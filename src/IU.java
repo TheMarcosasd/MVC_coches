@@ -11,6 +11,8 @@ public class IU {
     private JTextField modelo;
     private JTextField matricula;
     // necesitamos el controlador aqui para avisar de los eventos
+    private JButton buscarCoche;
+    private JTextField Matriculaa;
     static Controller miControlador;
 
     /**
@@ -30,6 +32,16 @@ public class IU {
             miControlador.crearCoche(modelo.getText(), matricula.getText());
         }
     });
+        buscarCoche.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+            String matricul = Matriculaa.getText();
+            Controller.buscarCoche(matricul);
+            StringBuilder sb= new StringBuilder();
+                sb.append("Modelo: ").append(car.getModelo()).append(", Matricula: ").append(car.getMatricula()).append("\n");
+                resulArea.setText(sb.toString);
+            }
+        });
+
     }
 
     /**

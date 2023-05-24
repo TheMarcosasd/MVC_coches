@@ -27,4 +27,8 @@ public class Controller {
         if (aux != null) View.mostrarVelocidad(aux.matricula, aux.velocidad);
         // TODO mandar mensaje de error si no fue posible crear el coche
     }
+    public void buscarCoche(String matricula){
+        List<Coche> igual = Model.buscarCoche(matricula);
+        View.mostrarCoche(igual);
+    }
 }

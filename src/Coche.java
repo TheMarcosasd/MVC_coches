@@ -8,4 +8,10 @@ public class Coche {
         this.matricula = matricula;
         this.velocidad = 0;
     }
+   public String getModelo(){
+        return modelo;
+   }
+   public String getMatricula(){
+        return matricula;
+   }
 }
